@@ -8,7 +8,8 @@ const data = [
     sex: 'Male',
     age: 3,
     breed: 'Golden Retriever',
-    story: 'Owner Passed away'
+    story: 'Owner Passed away',
+    adopted: "Tom"
   },
   {
     id: 2,
@@ -18,7 +19,8 @@ const data = [
     sex: 'Male',
     age: 3,
     breed: 'Golden Retriever',
-    story: 'Owner Passed away'
+    story: 'Owner Passed away',
+    adopted: ''
   },
   {
     id: 3,
@@ -28,7 +30,8 @@ const data = [
     sex: 'Male',
     age: 3,
     breed: 'Golden Retriever',
-    story: 'Owner Passed away'
+    story: 'Owner Passed away',
+    adopted:'Sally'
   }
 ]
 module.exports = data;
