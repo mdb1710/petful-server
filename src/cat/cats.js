@@ -14,23 +14,23 @@ const data = [
   },
   {
     id: 2,
-    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    imageURL: 'https://img.purch.com/h/1400/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MTkvb3JpZ2luYWwvY3V0ZS1raXR0ZW4uanBn',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
     name: 'Zeus',
     sex: 'Male',
     age: 3,
-    breed: 'Golden Retriever',
-    story: 'Owner Passed away',
+    breed: 'Big Boss Cat',
+    story: 'No story',
     adopted: ''
   },
   {
     id: 3,
-    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    imageURL: 'https://static.boredpanda.com/blog/wp-content/uploads/2018/04/5acb63d83493f__700-png.jpg',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Zeus',
+    name: 'Cool Cat',
     sex: 'Male',
     age: 3,
-    breed: 'Golden Retriever',
+    breed: 'Cool Cat',
     story: 'Owner Passed away',
     adopted:'Sally'
   }

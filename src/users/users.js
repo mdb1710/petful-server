@@ -2,10 +2,28 @@ const Queue = require('../Queue')
 
 const data = [ 
   {
-    name: 'Matt'
+    user: 'Matt'
   },
   {
-    name: 'Mike'
+    user: 'Mike'
+  },
+  {
+    user: 'Mack'
+  },
+  {
+    user: 'Maddie'
+  },
+  {
+    user: 'Matty'
+  },
+  {
+    user: 'Mark'
+  },
+  {
+    user: 'Doug'
+  },
+  {
+    user: 'Greg'
   }
   
 ]

@@ -1,27 +1,33 @@
 const express = require('express');
 const catRouter = express.Router();
-const jsonBodyParser = express.json();
 const cats = require('./cats')
+const Users = require('../users/users')
+const adopted = require('../adopted/adopted-service')
 
 catRouter.get('/', (req,res,next) => {
   let cat = []
   
   if(!cats.first) {
-    return [];
+    res.status(200).json([])
+  }
+  else{
+    let currNode = cats.first;
+    while(currNode !== null){
+      cat.push(currNode.value)
+      currNode = currNode.next;
+    }
+  
+    res.status(200).json(cat)
   }
 
-  let currNode = cats.first;
-  while(currNode !== null){
-    cat.push(currNode.value)
-    currNode = currNode.next;
-  }
-
-  res.status(200).json(cat)
+ 
 })
 
-catRouter.delete('/', jsonBodyParser,(req,res,next) => {
-  cats.dequeue()
-  res.status(204).end()
+catRouter.delete('/',(req,res,next) => {
+  const byeCat = cats.dequeue()
+  const ad = Users.dequeue()
+  adopted.enqueue(Object.assign(byeCat,ad))
+  res.status(200).json(ad.user)
 
 }) 
 

@@ -12,6 +12,9 @@
     "migrate": "postgrator --config postgrator-config.js",
     "dev": "nodemon src/server.js"
   },
+  "engines": {
+       "node": "10.11.0"
+     },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
