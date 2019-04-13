@@ -1,26 +1,28 @@
-# Express Boilerplate!
+# Petful
 
-This is a boilerplate project used for starting new projects!
+*Application was made by Matthew Nguyen and Michael Bonner*
 
-## How do set up?
+[Demo](matt-michael-petful.matth3wn.now.sh)  
+[Client Repo](https://github.com/thinkful-ei-armadillo/petful-client-matt-michael)  
+[Server Repo](https://github.com/thinkful-ei-armadillo/petful-server-matt-michael)
+  
+**API Endpoints**  
+  
+GET  /api/cats  
+GET /api/dogs  
+GET /api/users  
+  
+DELETE /api/cats  
+DELETE /api/dogs  
+DELETE /api/users
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+**Summary**    
 
-## Scripts
-
-Start the application `npm start`
-
-Start nodemon for the application `npm run dev`
-
-Run the tests in watch mode `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+We help pets find their forever home.
+If you are looking for the perfect addition to your family click the button below to start your search.
+Our pet shelter uses the first in, first out adoption process, so
+the pets that have been with us the longest are adopted first.
+  
+**Technology used**  
+React, Express.js, and Node.js
