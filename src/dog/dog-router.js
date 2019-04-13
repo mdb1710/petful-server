@@ -1,23 +1,28 @@
 const express = require('express');
 const dogRouter = express.Router();
 const jsonBodyParser = express.json();
-const dogs = require('./dog')
+const dog = require('./dog')
 
 dogRouter.get('/', (req,res,next) => {
-  res.json(dogs)
+  let dogs = []
+  
+  if(!dog.first) {
+    return [];
+  }
+
+  let currNode = dog.first;
+  while(currNode !== null){
+    dogs.push(currNode.value)
+    currNode = currNode.next;
+  }
+
+  res.status(200).json(dogs)
+
 })
 
 dogRouter.delete('/', jsonBodyParser,(req,res,next) => {
-  const { id } = req.body;
-  const deleted = dogs.splice(id, 1)
-  
-  if(deleted.length > 0){
-    res.status(204).end()
-  }
-  else{
-    res.status(404).send('Pet index is not found.')
-  }
-
+ dog.dequeue()
+ res.status(204).end()
 }) 
 
 module.exports = dogRouter;

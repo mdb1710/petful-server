@@ -4,19 +4,24 @@ const jsonBodyParser = express.json();
 const cats = require('./cats')
 
 catRouter.get('/', (req,res,next) => {
-  res.json(cats)
+  let cat = []
+  
+  if(!cats.first) {
+    return [];
+  }
+
+  let currNode = cats.first;
+  while(currNode !== null){
+    cat.push(currNode.value)
+    currNode = currNode.next;
+  }
+
+  res.status(200).json(cat)
 })
 
 catRouter.delete('/', jsonBodyParser,(req,res,next) => {
-  const { id } = req.body;
-  const deleted = cats.splice(id, 1)
-  
-  if(deleted.length > 0){
-    res.status(204).end();
-  }
-  else{
-    res.status(404).send('Pet index is not found.')
-  }
+  cats.dequeue()
+  res.status(204).end()
 
 }) 
 

@@ -1,3 +1,4 @@
+const Queue = require('../Queue')
 
 const data = [ 
   {
@@ -34,6 +35,17 @@ const data = [
     adopted: "Tom"
   }
 ]
-module.exports = data;
+
+function q(arr){
+  let dQ = new Queue();
+
+  for(let i = 0; i < arr.length; i++) {
+    dQ.enqueue(arr[i])
+  }
+  return dQ;
+}
+
+const dog = q(data)
+module.exports = dog;
 
 
